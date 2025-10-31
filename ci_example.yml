@@ -1,0 +1,14 @@
+name: Esempio Workflow CI
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  esempio-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Step 1 - Checkout del codice
+        uses: actions/checkout@v3
+      - name: Step 2 - Messaggio di test
+        run: echo "La mia prima pipeline CI funziona!"
